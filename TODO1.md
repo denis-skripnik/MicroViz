@@ -1,3 +1,4 @@
+![](resources/baner/baner.png)
 # MicroViz - микросервисы для VIZ
 ## Часть 1. Первый месяц
 ## Задача: 
