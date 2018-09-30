@@ -1,3 +1,5 @@
+![](resources/baner/baner.png)
+
 # MicroViz is Viz micro services
 
 ## Список сервисов
