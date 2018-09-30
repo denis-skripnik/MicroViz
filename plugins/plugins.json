@@ -1,0 +1,8 @@
+{
+    "plugins": 
+            {
+                "voteForWintess": {
+                    "html": "VoteForWitness/vfwitness.html"
+                }
+            }
+}
