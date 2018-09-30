@@ -1,0 +1,48 @@
+<html>
+    <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Viz micro services</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../../style/styles.css">
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../style/main.css">
+        <script src="../../libs/jquery.min.js"></script>
+        <script src="../../libs/viz.min.js"></script>
+        <script src="script/committee.js"></script>
+    </head>
+    <body>
+        <h1>Комитет</h1>
+        <h2 id="committee_create_head">Создать запрос</h2>
+        <form>
+            <span>Логин:</span> <input placeholder="username">
+            Wif: <input placeholder="5K...">
+            Аккаунт для начисления средств: <input placeholder="username">
+            Длительность заявки: <input placeholder="Введите колличество дней 5-30">
+            Минимальная награда: <input placeholder="Минимум 0">
+            Максимальная награда: <input placeholder="Минимум 0">
+            Ссылка на проект: <input placeholder="https://example.com">
+            <button>Отправить</button>
+        </form>
+        <h2 id="committee_vote_request-head">Проголосовать за воркера</h2>
+        <form>
+            Логин: <input placeholder="username">
+            Wif: <input placeholder="5K...">
+            ID запроса: <input placeholder="username">
+            Процент голосования: <input placeholder="Введите от -100 до 100">
+            <button>Проголосовать</button>
+        </form>
+        <h2 id="get_committee_request-head">Найти заявку по id</h2>
+        <form>
+            ID: <input placeholder="username">
+            <button>Поиск</button>
+        </form>
+        <h2 id="committee_requests_list-head">Список заявок</h2>
+        <button onclick="getCommitteeRequestsList()">Узнать</button>
+        <div id="committee_requests_list-list"></div>
+    </body>
+    
+</html>
