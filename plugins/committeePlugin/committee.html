@@ -18,15 +18,23 @@
         <h1>Комитет</h1>
         <h2 id="committee_create-head">Создать запрос</h2>
         <form>
-            <span>Логин:</span> <input placeholder="username">
-            Wif: <input placeholder="5K...">
-            Аккаунт для начисления средств: <input placeholder="username">
-            Длительность заявки: <input placeholder="Введите колличество дней 5-30">
-            Минимальная награда: <input placeholder="Минимум 0">
-            Максимальная награда: <input placeholder="Минимум 0">
-            Ссылка на проект: <input placeholder="https://example.com">
-            <button>Отправить</button>
+            Логин:
+            <input placeholder="username" id="committee_create_creator">
+            Wif: 
+            <input id="committee_create_wif" placeholder="5K..." >
+            Аккаунт для начисления средств: 
+            <input id="committee_create_worker" placeholder="username">
+            Длительность заявки: 
+            <input id="committee_create_duration" type="number" placeholder="Введите колличество дней 5-30">
+            Минимальная награда: 
+            <input id="committee_create_reward_min" type="number" placeholder="Минимум 0">
+            Максимальная награда: 
+            <input id="committee_create_reward_max" type="number" placeholder="Минимум 0">
+            Ссылка на проект: 
+            <input id="committee_create_url" placeholder="https://example.com">
+            <button type="button" onclick="createCommitteRequest()">Отправить</button>
         </form>
+        <div id="committee_create-out"></div>
         <h2 id="committee_create_link-head">Создать ссылку</h2>
         <form>
             <span>ID: </span> <input placeholder="ID">
