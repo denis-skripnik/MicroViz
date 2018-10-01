@@ -32,13 +32,13 @@
             <input id="committee_create_reward_max" type="number" placeholder="Минимум 0">
             Ссылка на проект: 
             <input id="committee_create_url" placeholder="https://example.com">
-            <button type="button" onclick="createCommitteRequest()">Отправить</button>
+            <button type="button" onclick="renderCreateCommitteRequest()">Отправить</button>
         </form>
         <div id="committee_create-out"></div>
         <h2 id="committee_create_link-head">Создать ссылку</h2>
         <form>
             <span>ID: </span> <input placeholder="ID">
-            <button>Создать</button>
+            <button type="button">Создать</button>
         </form>
         <h2 id="committee_vote_request-head">Проголосовать за воркера</h2>
         <form>
@@ -46,15 +46,16 @@
             Wif: <input placeholder="5K...">
             ID запроса: <input placeholder="username">
             Процент голосования: <input placeholder="Введите от -100 до 100">
-            <button>Проголосовать</button>
+            <button type="button">Проголосовать</button>
         </form>
         <h2 id="get_committee_request-head">Найти заявку по id</h2>
         <form>
-            ID: <input placeholder="username">
-            <button>Поиск</button>
+            ID: <input placeholder="username" id="get_committee_request_id">
+            <button onclick="renderCommitteeRequestById()" type="button">Поиск</button>
+            <div id="get_committee_request-out"></div>
         </form>
         <h2 id="committee_requests_list-head">Список заявок</h2>
-        <button onclick="getCommitteeRequestsList()">Узнать</button>
+        <button type="button" onclick="renderCommitteeRequestsList()">Узнать</button>
         <div id="committee_requests_list-list"></div>
     </body>
     
