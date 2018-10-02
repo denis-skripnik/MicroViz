@@ -96,6 +96,8 @@ function renderCommitteeVoteRequest()
     request_id = Number.parseInt($('#committee_vote_request-id').val());
     vote_percent = Number.parseInt($('#committee_vote_request-percent').val()) * 100;
 
+    $('#committee_vote_request-out').html('Подождите ...');
+
     CommitteRequestApi.voteRequest(wif, voter, request_id, vote_percent, callback);
 
     function callback(err, res)
@@ -125,20 +127,20 @@ function renderCommitteeWorkerCreateRequest()
     var duration =
             Number.parseFloat($('#committee_create_duration').val()) * 60 * 60 * 24;
 
-console.log(wif + '\n' + creator + '\n' + worker + '\n' + url + '\n' 
-        + reward_amount_min + '\n' + reward_amount_max + '\n' + duration);
+    console.log(wif + '\n' + creator + '\n' + worker + '\n' + url + '\n'
+            + reward_amount_min + '\n' + reward_amount_max + '\n' + duration);
 
     $('#committee_create-out').html('Подождите...');
     CommitteRequestApi.workerCreateRequest(wif, creator, url, worker,
             reward_amount_min, reward_amount_max, duration, callback);
-            
-    function callback (err, res)
+
+    function callback(err, res)
     {
         if (!err)
         {
             console.log(res);
             $('#committee_create-out').html('Запрос создан');
-        } else 
+        } else
         {
             alert(err);
         }
@@ -147,20 +149,20 @@ console.log(wif + '\n' + creator + '\n' + worker + '\n' + url + '\n'
 
 function renderWorkerCancelRequest()
 {
-   var wif = $('#committee_cancle_wif').val();
-   var creator = $('#committee_cancle_creator').val().trim();
-   var request_id = Number.parseInt($('#committee_cancle_id').val());
-   
+    var wif = $('#committee_cancle_wif').val();
+    var creator = $('#committee_cancle_creator').val().trim();
+    var request_id = Number.parseInt($('#committee_cancle_id').val());
+
     $('#committee_cancle-out').html('Подождите ...');
     CommitteRequestApi.workerCancelRequest(wif, creator, request_id, callback)
-   
-   function callback (err, res)
+
+    function callback(err, res)
     {
         if (!err)
         {
             console.log(res);
-            $('#committee_cancle-out').html('Запрос с ID '+ request_id +' отменен');
-        } else 
+            $('#committee_cancle-out').html('Запрос с ID ' + request_id + ' отменен');
+        } else
         {
             alert(err);
         }
