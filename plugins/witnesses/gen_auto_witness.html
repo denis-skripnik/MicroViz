@@ -21,8 +21,26 @@ and open the template in the editor.
             Описание:
             <textarea id="tarea_desc"></textarea><br>
             <button type="button" onclick="gen()">Генерировать</button>
+            
+            
+            <div>
+                Пример JSON:<br>
+                {<br>
+    "account_creation_fee": "1.000 VIZ",<br>
+    "maximum_block_size": 131072,<br>
+    "create_account_delegation_ratio": 10,<br>
+    "create_account_delegation_time": 2592000,<br>
+    "min_delegation": "0.001 VIZ",<br>
+    "min_curation_percent": 0,<br>
+    "max_curation_percent": 10000,<br>
+    "bandwidth_reserve_percent": 1000,<br>
+    "bandwidth_reserve_below": "500.000000 SHARES",<br>
+    "flag_energy_additional_cost": 0,<br>
+    "vote_accounting_min_rshares": 5000000,<br>
+    "committee_request_approve_min_percent": 1000<br>
+  }<br>
+            </div>
         </form>
-        <p> Будут изменены слудующие параметры:
         <div id="out">
             
         </div>
