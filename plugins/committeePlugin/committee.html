@@ -12,9 +12,13 @@
         <link rel="stylesheet" href="../../style/main.css">
         <script src="../../libs/jquery.min.js"></script>
         <script src="../../libs/viz.min.js"></script>
-        <script src="script/committee.js"></script>
+        <script src="../../scripts/utils/viz/viz_utils.js"></script>
+        <!--<script src="script/committee.js"></script>-->
+        <script src="script/controller/committe_controllers.js"></script>
+        <script src="script/model/committe_models.js"></script>
     </head>
     <body>
+        
         <h1>Комитет</h1>
         <h2 id="committee_create-head">Создать запрос</h2>
         <form>
@@ -32,31 +36,48 @@
             <input id="committee_create_reward_max" type="number" placeholder="Минимум 0">
             Ссылка на проект: 
             <input id="committee_create_url" placeholder="https://example.com">
-            <button type="button" onclick="renderCreateCommitteRequest()">Отправить</button>
+            <button type="button" onclick="renderCommitteeWorkerCreateRequest()">Отправить</button>
         </form>
         <div id="committee_create-out"></div>
+        
+        <h2 id="committee_cancle-head">Отменить запрос</h2>
+        <form>
+            Создатель:
+            <input placeholder="username" id="committee_cancle_creator">
+            Wif: 
+            <input id="committee_cancle_wif" placeholder="5K..." >
+            ID:
+            <input id="committee_cancle_id" placeholder="Введите число (1, 2, 3 ...)">
+            <button type="button" onclick="renderWorkerCancelRequest()">Отправить</button>
+        </form>
+        <div id="committee_cancle-out"></div>
+        
         <h2 id="committee_create_link-head">Создать ссылку</h2>
         <form>
             <span>ID: </span> <input placeholder="ID">
             <button type="button">Создать</button>
         </form>
+        
         <h2 id="committee_vote_request-head">Проголосовать за воркера</h2>
         <form>
-            Логин: <input placeholder="username">
-            Wif: <input placeholder="5K...">
-            ID запроса: <input placeholder="username">
-            Процент голосования: <input placeholder="Введите от -100 до 100">
-            <button type="button">Проголосовать</button>
+            Логин: <input id="committee_vote_request-login" placeholder="username">
+            Wif: <input id="committee_vote_request-wif" placeholder="5K...">
+            ID запроса: <input id="committee_vote_request-id" placeholder="Введите число (1,2,3 ...)">
+            Процент голосования: <input id="committee_vote_request-percent" placeholder="Введите от -100 до 100">
+            <button type="button" onclick="renderCommitteeVoteRequest()">Проголосовать</button>
+            <div id="committee_vote_request-out"></div>
         </form>
+        
         <h2 id="get_committee_request-head">Найти заявку по id</h2>
         <form>
             ID: <input placeholder="username" id="get_committee_request_id">
             <button onclick="renderCommitteeRequestById()" type="button">Поиск</button>
             <div id="get_committee_request-out"></div>
         </form>
+        
         <h2 id="committee_requests_list-head">Список заявок</h2>
-        <button type="button" onclick="renderCommitteeRequestsList()">Узнать</button>
-        <div id="committee_requests_list-list"></div>
+        <button type="button" onclick="renderCommitRequestList()">Узнать</button>
+        <div id="committee_requests_list-out"></div>
     </body>
     
 </html>
