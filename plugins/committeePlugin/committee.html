@@ -1,10 +1,11 @@
 <html>
     <head>
-         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Viz micro services</title>
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="icon" href="favicon.ico">
         <link rel="stylesheet" type="text/css" href="../../style/styles.css">
+        <link rel="stylesheet" type="text/css" href="../../style/form_style.css">
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -18,66 +19,94 @@
         <script src="script/model/committe_models.js"></script>
     </head>
     <body>
-        
-        <h1>Комитет</h1>
-        <h2 id="committee_create-head">Создать запрос</h2>
-        <form>
-            Логин:
-            <input placeholder="username" id="committee_create_creator">
-            Wif: 
-            <input id="committee_create_wif" placeholder="5K..." >
-            Аккаунт для начисления средств: 
-            <input id="committee_create_worker" placeholder="username">
-            Длительность заявки: 
-            <input id="committee_create_duration" type="number" placeholder="Введите колличество дней 5-30">
-            Минимальная награда: 
-            <input id="committee_create_reward_min" type="number" placeholder="Минимум 0">
-            Максимальная награда: 
-            <input id="committee_create_reward_max" type="number" placeholder="Минимум 0">
-            Ссылка на проект: 
-            <input id="committee_create_url" placeholder="https://example.com">
-            <button type="button" onclick="renderCommitteeWorkerCreateRequest()">Отправить</button>
-        </form>
-        <div id="committee_create-out"></div>
-        
-        <h2 id="committee_cancle-head">Отменить запрос</h2>
-        <form>
-            Создатель:
-            <input placeholder="username" id="committee_cancle_creator">
-            Wif: 
-            <input id="committee_cancle_wif" placeholder="5K..." >
-            ID:
-            <input id="committee_cancle_id" placeholder="Введите число (1, 2, 3 ...)">
-            <button type="button" onclick="renderWorkerCancelRequest()">Отправить</button>
-        </form>
-        <div id="committee_cancle-out"></div>
-        
-        <h2 id="committee_create_link-head">Создать ссылку</h2>
-        <form>
-            <span>ID: </span> <input placeholder="ID">
-            <button type="button">Создать</button>
-        </form>
-        
-        <h2 id="committee_vote_request-head">Проголосовать за воркера</h2>
-        <form>
-            Логин: <input id="committee_vote_request-login" placeholder="username">
-            Wif: <input id="committee_vote_request-wif" placeholder="5K...">
-            ID запроса: <input id="committee_vote_request-id" placeholder="Введите число (1,2,3 ...)">
-            Процент голосования: <input id="committee_vote_request-percent" placeholder="Введите от -100 до 100">
-            <button type="button" onclick="renderCommitteeVoteRequest()">Проголосовать</button>
-            <div id="committee_vote_request-out"></div>
-        </form>
-        
-        <h2 id="get_committee_request-head">Найти заявку по id</h2>
-        <form>
-            ID: <input placeholder="username" id="get_committee_request_id">
-            <button onclick="renderCommitteeRequestById()" type="button">Поиск</button>
-            <div id="get_committee_request-out"></div>
-        </form>
-        
-        <h2 id="committee_requests_list-head">Список заявок</h2>
-        <button type="button" onclick="renderCommitRequestList()">Узнать</button>
-        <div id="committee_requests_list-out"></div>
+
+
+        <main>
+            <h1>Комитет <br><a href="https://github.com/VizTower/MicroViz">Github</a></h1>
+            <div class="card">
+                <div class="card_form">
+                    <h2 id="committee_create-head">Создать запрос</h2>
+                    <form>
+                        Логин:
+                        <input placeholder="username" id="committee_create_creator">
+                        Wif: 
+                        <input id="committee_create_wif" placeholder="5K..." >
+                        Аккаунт для начисления средств: 
+                        <input id="committee_create_worker" placeholder="Введите строку (прим. @username)">
+                        Длительность заявки: 
+                        <input id="committee_create_duration" type="number" placeholder="Введите колличество дней 5-30">
+                        Минимальная награда: 
+                        <input id="committee_create_reward_min" type="number" placeholder="Минимум 0">
+                        Максимальная награда: 
+                        <input id="committee_create_reward_max" type="number" placeholder="Минимум 0">
+                        Ссылка на проект: 
+                        <input id="committee_create_url" placeholder="https://example.com">
+                        <button type="button" onclick="renderCommitteeWorkerCreateRequest()">Отправить</button>
+                    </form>
+                    <div id="committee_create-out"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_form">
+                    <h2 id="committee_cancle-head">Отменить запрос</h2>
+                    <form>
+                        Создатель:
+                        <input placeholder="Введите строку (прим. @username)" id="committee_cancle_creator">
+                        Wif: 
+                        <input id="committee_cancle_wif" placeholder="5K..." >
+                        ID:
+                        <input id="committee_cancle_id" placeholder="Введите число (1, 2, 3 ...)">
+                        <button type="button" onclick="renderWorkerCancelRequest()">Отправить</button>
+                    </form>
+                    <div id="committee_cancle-out"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_form">
+                    <h2 id="committee_create_link-head">Создать ссылку</h2>
+                    <form>
+                        <span>ID: </span> <input id="committee_create_link-id" placeholder="ID">
+                        <button type="button" onclick="renderLinkGenerator()">Создать</button>
+                    </form>
+                    <div id="committee_create_link-out"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_form">
+                    <h2 id="committee_vote_request-head">Проголосовать за воркера</h2>
+                    <form>
+                        Логин: <input id="committee_vote_request-login" placeholder="Введите строку (прим. @username)">
+                        Wif: <input id="committee_vote_request-wif" placeholder="5K...">
+                        ID запроса: <input id="committee_vote_request-id" placeholder="Введите число (1,2,3 ...)">
+                        Процент голосования: <input id="committee_vote_request-percent" placeholder="Введите от -100 до 100">
+                        <button type="button" onclick="renderCommitteeVoteRequest()">Проголосовать</button>
+                        <div id="committee_vote_request-out"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_form">
+                    <h2 id="get_committee_request-head">Найти заявку по id</h2>
+                    <form>
+                        ID: <input placeholder="ID" id="get_committee_request_id">
+                        <button onclick="renderCommitteeRequestById()" type="button">Поиск</button>
+                        <div id="get_committee_request-out"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_form">
+                    <h2 id="committee_requests_list-head">Список заявок</h2>
+                    <button type="button" onclick="renderCommitRequestList()">Узнать</button>
+                    <div id="committee_requests_list-out"></div>
+                </div>
+            </div>
+        </main>
     </body>
-    
+
 </html>

@@ -1,9 +1,124 @@
-input
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Source+Serif+Pro');
+
+main
 {
-    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    padding: 5px;
 }
 
-.content {
+input, textarea
+{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 2px;
+    border: 2px solid #fff59d;
+    margin: 5px;
+}
+
+input:focus, textarea:focus
+{
+    border-color: #fbc02d;
+}
+
+input
+{
+    width: 250px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+button
+{
+    font-family: 'Roboto', sans-serif;
+    
+    outline: none;
+    background-color: #fbc02d;
+    border: none;
+    color: #333;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    margin: 5px;
+    border: 1px solid #fbc02d;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background-color: #eba705;
+    border-color: #eba705;
+}
+
+button:active
+{
+    background-color: transparent;
+    border-color: #eba705;
+    color: #eba705;
+}
+
+span, applet, object, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{
+  font-family: 'Source Serif Pro', serif;
+  color: #333;
+  font-weight: 400;
+}
+
+a
+{
+    color: #ff6d00;
+}
+
+h1, h2, h3
+{
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+h4, h5, h6
+{
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 
+{
+    font-size: 32px;
+}
+
+h2
+{
+    font-size: 24px;
+}
+
+h3 
+{
+    font-size: 19px;
+}
+
+h4 
+{
+    font-size: 16px;
+}
+
+h5
+{
+    font-size: 13px;
+}
+
+h6 
+{
+    font-size: 11px;
+}
+
+/*.content {
     font: 1em/1.4 Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
  
@@ -13,4 +128,4 @@ input
  
 .code {
     font: 0.8em/1.6 Monaco, Mono-Space, monospace;
-}
+}*/

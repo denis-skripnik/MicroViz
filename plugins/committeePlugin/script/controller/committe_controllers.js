@@ -114,6 +114,12 @@ function renderCommitteeVoteRequest()
     }
 }
 
+function renderLinkGenerator()
+{
+    var id = Number.parseInt($('#committee_create_link-id').val());
+    $('#committee_create_link-out').html(window.location.hostname + '/plugins/committeePlugin/auto_vote.html?id='+id);
+}
+
 function renderCommitteeWorkerCreateRequest()
 {
     var wif = $('#committee_create_wif').val();

@@ -10,21 +10,44 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.7/sjcl.min.js"></script>
-        
+
         <script src="../../libs/jquery.min.js"></script>
         <script src="../../libs/viz.min.js"></script>
         <script src="auto_witness.js"></script>
+
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../../style/styles.css">
+        <link rel="stylesheet" type="text/css" href="../../style/form_style.css">
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../style/main.css">
+        <script src="../../libs/jquery.min.js"></script>
+        <script src="../../libs/viz.min.js"></script>
+        <script src="../../scripts/utils/viz/viz_utils.js"></script>
+        <!--<script src="script/committee.js"></script>-->
+
     </head>
+    <h1><a href="https://github.com/VizTower/MicroViz">Github</a></h1>
     <body onload="load()">
-        <form>
-            Логин: <input id="login" placeholder="Введите строку(например, user)">
-            Wif: <input id="wif" placeholder="Введите ключ">
-            <button type="button" onclick="send()">Голосовать</button>
-        </form>
-        <div id="desc"></div>
-        <p id="head"> Будут изменены слудующие параметры:
-        <div id="out" onload="">
-            
+        <div class="card">
+            <div class="card_form">
+                <form>
+                    Логин: <input id="login" placeholder="Введите строку(например, user)">
+                    Wif: <input id="wif" placeholder="Введите ключ">
+                    <button type="button" onclick="send()">Голосовать</button>
+                </form>
+                <br>
+                <div id="desc"></div>
+                <br>
+                <p id="head"> Будут изменены слудующие параметры:
+                    <br>
+                <div id="out" onload="">
+
+                </div>
+            </div>
         </div>
     </body>
 </html>

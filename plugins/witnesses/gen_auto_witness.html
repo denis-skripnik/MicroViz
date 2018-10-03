@@ -10,39 +10,61 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.7/sjcl.min.js"></script>
-        
+
         <script src="../../libs/jquery.min.js"></script>
         <script src="auto_witness.js"></script>
+        
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../../style/styles.css">
+        <link rel="stylesheet" type="text/css" href="../../style/form_style.css">
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../style/main.css">
+        <script src="../../libs/jquery.min.js"></script>
+        <script src="../../libs/viz.min.js"></script>
+        <script src="../../scripts/utils/viz/viz_utils.js"></script>
+        <!--<script src="script/committee.js"></script>-->
+
     </head>
     <body>
-        <form>
-            Введите параметры в JSON формате:
-            <textarea id="tarea"></textarea><br>
-            Описание:
-            <textarea id="tarea_desc"></textarea><br>
-            <button type="button" onclick="gen()">Генерировать</button>
-            
-            
-            <div>
-                Пример JSON:<br>
-                {<br>
-    "account_creation_fee": "1.000 VIZ",<br>
-    "maximum_block_size": 131072,<br>
-    "create_account_delegation_ratio": 10,<br>
-    "create_account_delegation_time": 2592000,<br>
-    "min_delegation": "0.001 VIZ",<br>
-    "min_curation_percent": 0,<br>
-    "max_curation_percent": 10000,<br>
-    "bandwidth_reserve_percent": 1000,<br>
-    "bandwidth_reserve_below": "500.000000 SHARES",<br>
-    "flag_energy_additional_cost": 0,<br>
-    "vote_accounting_min_rshares": 5000000,<br>
-    "committee_request_approve_min_percent": 1000<br>
-  }<br>
+        <h1><a href="https://github.com/VizTower/MicroViz">Github</a></h1>
+        <div class="card">
+            <div class="card_form">
+                <form>
+                    Введите параметры в JSON формате:
+                    <textarea id="tarea"></textarea><br>
+                    Описание:
+                    <textarea id="tarea_desc"></textarea><br>
+                    <button type="button" onclick="gen()">Генерировать</button>
+
+
+                    <div id="out">
+
+                </div>
+                    
+                    <div>
+                        Пример JSON:<br>
+                        {<br>
+                        "account_creation_fee": "1.000 VIZ",<br>
+                        "maximum_block_size": 131072,<br>
+                        "create_account_delegation_ratio": 10,<br>
+                        "create_account_delegation_time": 2592000,<br>
+                        "min_delegation": "0.001 VIZ",<br>
+                        "min_curation_percent": 0,<br>
+                        "max_curation_percent": 10000,<br>
+                        "bandwidth_reserve_percent": 1000,<br>
+                        "bandwidth_reserve_below": "500.000000 SHARES",<br>
+                        "flag_energy_additional_cost": 0,<br>
+                        "vote_accounting_min_rshares": 5000000,<br>
+                        "committee_request_approve_min_percent": 1000<br>
+                        }<br>
+                    </div>
+                </form>
+                
             </div>
-        </form>
-        <div id="out">
-            
         </div>
     </body>
 </html>

@@ -1,0 +1,44 @@
+h1 
+{
+    margin: 10px auto;
+    width: min-content;
+}
+
+.card_form
+{
+    max-width: 300px;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.card_form h2
+{
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card_form button
+
+{
+    margin-bottom: 10px;
+}
+
+.card
+{
+    margin: 0 auto;
+    width: min-content;
+
+    box-shadow: 0 0px 1px #0000003f;
+    border-radius: 2px;
+
+    transition: all 0.1s linear;
+    z-index: 20;
+
+    margin-bottom: 10px;
+}
+
+.card:hover
+{
+    box-shadow: 0 0px 8px #0000003f;
+    transform: scale(1.01, 1.01);
+}
