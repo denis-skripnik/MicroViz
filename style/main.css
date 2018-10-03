@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Source+Serif+Pro');
+@import url('nav_style.css');
 
 main
 {
@@ -15,6 +16,12 @@ input, textarea
     border-radius: 2px;
     border: 2px solid #fff59d;
     margin: 5px;
+}
+
+textarea
+{
+    width: 100%;
+    min-height: 100px;
 }
 
 input:focus, textarea:focus

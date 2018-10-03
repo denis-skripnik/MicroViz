@@ -42,6 +42,7 @@ function renderCommitRequestList()
         } else
         {
             alert(err);
+            console.log(err);
         }
     }
 }
@@ -84,6 +85,7 @@ function renderCommitteeRequestById()
         } else
         {
             alert(err);
+            console.log(err);
         }
     }
 }
@@ -109,6 +111,7 @@ function renderCommitteeVoteRequest()
                     + ' с силой в ' + vote_percent / 100 + '%');
         } else
         {
+            alert(err);
             console.log(err);
         }
     }
@@ -149,6 +152,7 @@ function renderCommitteeWorkerCreateRequest()
         } else
         {
             alert(err);
+            console.log(err);
         }
     }
 }
@@ -171,6 +175,7 @@ function renderWorkerCancelRequest()
         } else
         {
             alert(err);
+            console.log(err);
         }
     }
 }

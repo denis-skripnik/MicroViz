@@ -120,6 +120,7 @@ function send()
         } else
         {
             alert('Не удалось найти делегата. Ошибка: ' + err);
+            console.log(err);
         }
     });
 }

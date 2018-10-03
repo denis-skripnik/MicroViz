@@ -1,4 +1,4 @@
 (function ()
 {
-    $("#nav-bar").load("template/navigation.html");
+    $("#nav-bar").load("/MicroViz/template/navigation.html");
 })();
