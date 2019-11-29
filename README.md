@@ -1,5 +1,4 @@
 ![](resources/baner/baner.png)
-# Проект закрты. CLOSED
 # MicroViz is Viz micro services
 
 ## Список сервисов
